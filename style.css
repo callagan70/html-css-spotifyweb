@@ -23,7 +23,7 @@ header{
     display: flex;
     position: absolute;
     right: 0%;
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 90%;
     height: 10%;
     justify-content: end;
@@ -50,7 +50,7 @@ header{
 /* ANCHOR Nav left */
 .nav-left{
     display: flex;
-    background-color: rgb(17, 245, 36);
+    /* background-color: rgb(17, 245, 36); */
     height: 90%;
     width: 10%;
     flex-direction: column;
@@ -90,32 +90,59 @@ footer{
 }
 
     .footer-left{
-        background-color: aliceblue;
-        width: 20%;
         display: flex;
+        /* background-color: aliceblue; */
+        width: 20%;
+        align-items: center;
     }
+
         .footer-left div>div>img{
             width: 50px;
         }
-        .footer-left div>p:first-child{
+        .footer-left div>p:nth-child(1){
             font-size: 0.6em;
             font-weight:700;
+            color: white;
         }
         .footer-left div>p:nth-child(2){
             font-size: 0.5em;
+            color: white;
+        }
+        .footer-left div:nth-last-child(2){
+            margin: 3px;
         }
 
-
     .footer-middle{
-        background-color: rgb(247, 10, 10);
+        display: flex;
+        /* background-color: rgb(247, 10, 10); */
         width: 50%;
+        flex-direction: column;
+        justify-content: center;
     }
+        .footer-middle div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-middle div>div{
+            color: white;
+            font-size: 1.2em;
+            margin: 3px;
+        }
 
     .footer-right{
-        background-color: green;
+        display: flex;
+        justify-content: center;
+        color: white;
+        /* background-color: green; */
         width: 20%;
-
+        align-items: center;
     }
+        .footer-right div:nth-child(4){
+            width: 10px;
+        }
+        .footer-right div{
+            font-size: smaller;
+        }
 
 
 
