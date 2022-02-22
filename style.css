@@ -11,15 +11,12 @@
 
 /* SECTION Mobile */
 @media only screen and (max-width: 420px){
-    
-
 body{
+    /* display: flex; */
     position: relative;
     background-color: black;
     width: 100vw;
-    height: 100vh;
-}
-
+    height: 100vh;}
 
 /* ANCHOR Header */
 header{
@@ -83,45 +80,31 @@ main{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ANCHOR Footer */
 footer{
     display: flex;
     justify-content: space-between;
     height: 10vh;
     width: 100vw;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
     .footer-left{
         background-color: aliceblue;
         width: 20%;
+        display: flex;
     }
+        .footer-left div>div>img{
+            width: 50px;
+        }
+        .footer-left div>p:first-child{
+            font-size: 0.6em;
+            font-weight:700;
+        }
+        .footer-left div>p:nth-child(2){
+            font-size: 0.5em;
+        }
+
 
     .footer-middle{
         background-color: rgb(247, 10, 10);
@@ -133,6 +116,7 @@ footer{
         width: 20%;
 
     }
+
 
 
 
