@@ -87,11 +87,12 @@ main{
             justify-content: center;
             background-color: #141922;
             margin-top: -1px;
+            padding: 10px 20px 10px 20px;
         }
 
         .main-nav a{
             color: white;
-            margin: 20px;
+            margin: 4px;
             font-size: 1em;
 
         }
@@ -239,60 +240,69 @@ footer{
     top: 90vh;
     height: 10vh;
     width: 100vw;
-    /* background-color: aquamarine; */
 }
 
     .footer-left{
         display: flex;
-        /* background-color: aliceblue; */
-        width: 20%;
+        width: 25%;
         align-items: center;
     }
 
-        .footer-left div>div>img{
-            width: 50px;
+        .footer-left div>img{
+            width: 30px;
         }
+
         .footer-left div>p:nth-child(1){
             font-size: 0.6em;
             font-weight:700;
             color: white;
         }
+
         .footer-left div>p:nth-child(2){
             font-size: 0.5em;
             color: white;
         }
+
         .footer-left div:nth-last-child(2){
-            margin: 3px;
+            padding: 0 6px 0 6px;
         }
 
     .footer-middle{
         display: flex;
-        /* background-color: rgb(247, 10, 10); */
-        width: 50%;
+        width: 45%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        background-color: red;
     }
         .footer-middle div{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
         .footer-middle div>div{
             color: white;
-            font-size: 1.2em;
+            font-size: 1em;
             margin: 3px;
         }
+            .input-range{
+               display: flex;
+               align-items: center;
+               border-radius: 50px;
+               width: fit-content;
+              justify-content: center;
+            }
 
-    .footer-right{
+    .footer-right{          
         display: flex;
         justify-content: center;
         color: white;
-        /* background-color: green; */
-        width: 20%;
+        width: 25%;
         align-items: center;
+        justify-content: start;
     }
-        .footer-right div:nth-child(4){
+        /* .footer-right div:nth-child(4){
             width: 10px;
-        }
+        } */
         .footer-right div{
             font-size: smaller;
         }
