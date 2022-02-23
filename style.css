@@ -2,10 +2,10 @@
     Margin: 0;
     Box-sizing: border-box}
 
-  .clearfix::after{
-   content: "";
-   display: table;
-   clear: both;}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;}
 
 
 
@@ -24,8 +24,7 @@ body{
 header{
     display: flex;
     position: absolute;
-    right: 0%;
-    /* background-color: aqua; */
+    right: 0px;
     width: 90%;
     height: 10%;
     justify-content: end;
@@ -46,43 +45,23 @@ header{
         }
 
 /* ANCHOR Nav left */
-/* FIXME capire come fare scomparire la barra */
-/* .nav-left{
-    z-index: 2;
-}
 
-.nav-left-hover{
-    z-index: 1;
-    display: flex;
-    height: 90%;
-    width: 50%;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .nav-left{
+        display: flex;
+        position: absolute;
+        height: 90%;
+        width: 10%;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
-nav-left:active{
-    z-index: 0;
-} */
-
-.nav-left{
-    display: flex;
-    height: 90%;
-    width: 10%;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.icon-nav div>img{
-    width: 30px;
-}
+        .icon-nav div>img{
+            width: 30px;
+        }
 
 
 /* ANCHOR Main */
@@ -92,104 +71,144 @@ main{
     display: flex;
     height: 80%;
     width: 90%;
-    /* background-color: yellow; */
     top: 10vh;
     right: 0vw;
     flex-direction: column;
     overflow-y: auto;
-    background-color: #141922;
-}
+    background-color: #141922;}
 
-    main nav a{
-        color: white;
-        margin: 5px;
-    }
-    main nav{
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        height: fit-content;
-        justify-content: center;
-        background-color: #141922;
-    }
 
-    .album{
+/* ANCHOR Sezione Nav */
+/* FIXME manca qualche pixel dal TOP */
+        .main-nav{
+            display: flex;
+            position: fixed;
+            flex-wrap: wrap;
+            height: fit-content;
+            justify-content: center;
+            background-color: #141922;
+            margin-top: -1px;
+        }
+
+        .main-nav a{
+            color: white;
+            margin: 10px;
+        }
+
+/* ANCHOR Sezione Album */
+
+    .main-sect{
         display: flex;
-        margin-top: 20px;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+        .album-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            width: calc((200/2 - 10px));
+        }
 
-    .album div>img{
-        width: 35vw;
+            .album-dim{
+                width: 100px;
+                height: 100px;
+            }
+
+            .album-Subtitle{
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+            }
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                color: white;
+                width: 100%;
+            }
+
+    .album1{
+        background-image: url('./img/metal_lifting.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-/* FIXME mettere le immagini in background */
-    .album-1,
-    .album-2,
-    .album-3,
-    .album-4,
-    .album-5,
-    .album-6,
-    .album-7,
-    .album-8,
-    .album-9,
-    .album-10{
-        padding: 10px;
-        width: calc((100% / 2) - 10px);
+    .album2{
+        background-image: url('./img/stranger.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    .album-9,
-    .album-10{
-        border: 1px solid red;
-        border-radius: 100px;
+    .album3{
+        background-image: url('./img/aquietplace.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    /* FIXME Stile del testo */
-
-    main h1{
-        font-size: 1.5em;
-        font-weight: 700;
-        color: white;
-        margin-top: 100px;
-        margin-left: 10px;
+    .album4{
+        background-image: url('./img/split.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h2{
-        font-size: 1.5em;
-        font-weight: 700;
-        color: white;
-        margin-top: 35px;
-        margin-left: 10px;
+    .album5{
+        background-image: url('./img/cure.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h3{
-        font-size: 0.8em;
-        color: white;
-        color: white;
-        margin-left: 10px;
+    .album6{
+        background-image: url('./img/sinister.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h1:nth-child(3){
-        margin-top: -80px;
+    .album7{
+        background-image: url('./img/radar.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main div>p{
-        font-weight: 700;
-        text-align: center;
-        color: white;
+    .album8{
+        background-image: url('./img/mixdaily.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-/* FIXME Perché mi prende il 3 e non il secondo? */
-    main div>p:nth-child(3){
-        font-size: 0.8em;
-        text-align: center;
-        color: white;
+
+    .album9{
+        background-image: url('./img/youg.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
+
+    .album10{
+        background-image: url('./img/einaudi.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+        .album9,
+        .album10{
+            border-radius: 50px;
+        }
+
+
+
+
+
+
+
+
+
+
 
 /* ANCHOR Footer */
 footer{
     display: flex;
+    position: absolute;
     justify-content: space-between;
+    top: 90vh;
     height: 10vh;
     width: 100vw;
     /* background-color: aquamarine; */

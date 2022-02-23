@@ -10,7 +10,7 @@
 
 
 /* SECTION Mobile */
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 768px){
 body{
     position: relative;
     background-color: black;
