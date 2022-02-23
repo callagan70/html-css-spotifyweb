@@ -67,13 +67,12 @@ header{
 /* ANCHOR Main */
 main{
     display: flex;
+    flex-direction: column;
     position: absolute;
-    display: flex;
     height: 80%;
     width: 90%;
     top: 10vh;
     right: 0vw;
-    flex-direction: column;
     overflow-y: auto;
     background-color: #141922;}
 
@@ -92,7 +91,9 @@ main{
 
         .main-nav a{
             color: white;
-            margin: 10px;
+            margin: 20px;
+            font-size: 1em;
+
         }
 
 /* ANCHOR Sezione Album */
@@ -101,7 +102,13 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 70px 20px 0 20px;
+
     }
+        /* .main-sect-top{
+            margin-top: 70px;
+
+        } */
         .album-container{
             display: flex;
             flex-direction: column;
@@ -119,6 +126,18 @@ main{
                 display: flex;
                 flex-direction: column;
                 width: 150px;
+                color: white;
+                text-align: center;
+                padding: 10px 0 10px 0;
+            }
+            .album-Subtitle p:nth-child(1){
+                font-size: 0.8em;
+                font-weight: 700;
+            }
+
+            .album-Subtitle p:nth-child(2){
+                font-size: 0.6em;
+                font-weight: 100;
             }
 
             .title{
@@ -126,7 +145,16 @@ main{
                 flex-direction: column;
                 color: white;
                 width: 100%;
+                padding: 30px 0 10px 10px;
             }
+
+                .title h1{
+                    font-size: 1.5em;
+                }
+
+                .title h3{
+                    font-size: 0.8em;
+                }
 
     .album1{
         background-image: url('./img/metal_lifting.jpg');
@@ -274,4 +302,3 @@ footer{
 }
 
 /* !SECTION  */
-
