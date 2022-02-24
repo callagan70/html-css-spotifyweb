@@ -48,6 +48,12 @@ header{
             font-size: 0.5em;
         }
 
+        .upgrade:hover{
+            padding: 10px;
+            font-size: 2em;
+
+        }
+
 /* ANCHOR Nav left */
 
     .nav-left{
@@ -82,7 +88,6 @@ main{
 
 
 /* ANCHOR Sezione Nav */
-/* FIXME manca qualche pixel dal TOP */
         .main-nav{
             display: flex;
             position: fixed;
@@ -161,6 +166,10 @@ main{
                 .title h3{
                     font-size: 0.8em;
                 }
+            
+            .space-end{
+                justify-content: start;
+            }
 
     .album1{
         background-image: url('./img/metal_lifting.jpg');

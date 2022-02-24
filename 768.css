@@ -8,7 +8,7 @@
     clear: both;}
 
 /* SECTION tablet */
-@media only screen and (min-width: 420px) and (max-width: 768px){
+@media only screen and (min-width: 421px) and (max-width: 768px){
 body{
     position: relative;
     background-color: black;
@@ -16,41 +16,7 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
-    .nav-left-2{
-        display: flex;
-        position: absolute;
-        height: 90%;
-        width: 20vw;
-        flex-direction: column;
-        justify-content: space-between;
-        justify-items: center;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-            .playlist{
-                display: flex;
-                flex-direction: column;
-                width: 20vw;
-                padding-left: 10px;
-            }
-            
-            .playlist div,
-            .nav-left-up div>a,
-            .nav-left-down div>a,
-            .playlist a{
-                color: white;
-                font-size: 1.2em;
-                text-decoration: none;
-            }
-
-            .nav-left-2 div>div>a>img{
-                width: 30px;
-            }
-
-            .nav-left-up div:nth-child(1)>a img{
-                width: 120px;
-            }
+    
 
 /* ANCHOR Header */
 header{
@@ -76,13 +42,19 @@ header{
             font-size: 0.5em;
         }
 
-/* ANCHOR Nav left */
+        .upgrade:hover{
+            padding: 10px;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 50px;
+        }
 
-    .nav-left{
+/* ANCHOR Nav left 1 */
+.nav-left{
         display: none;
         position: absolute;
         height: 90%;
-        width: 10%;
+        width: 20em;
         flex-direction: column;
         justify-content: space-between;
         justify-items: center;
@@ -90,11 +62,70 @@ header{
         padding-top: 10px;
         padding-bottom: 10px;
     }
-
         .icon-nav div>img{
-            width: 30px;
+            /* width: 30px; */
         }
 
+
+/* ANCHOR Nav left 2 */
+
+        .nav-left-2{
+            display: flex;
+            position: absolute;
+            height: 90%;
+            width: 30vw;
+            flex-direction: column;
+            justify-content: space-between;
+            justify-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            z-index: 1;
+        }
+                .playlist{
+                    display: flex;
+                    flex-direction: column;
+                    width: 30vw;
+                    padding-left: 10px;
+                }
+                
+                .playlist div,
+                .nav-left-up div>a,
+                .nav-left-down div>a,
+                .playlist a{
+                    color: white;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                }
+    
+                .logo-big img{
+                    /* background-color: aquamarine; */
+                    width: 250px;
+                }
+
+                .logo-big{
+                    padding-bottom: 20px;
+                }
+        
+                .nav-img-home img,
+                .nav-img-profile img{
+                    width: 30px;
+                    font-size: 1em;
+                }
+
+                .nav-img-download img,
+                .nav-img-search img,
+                .nav-img-libreria img{
+                    width: 30px;
+                    opacity: 0.5;
+                }
+
+                .nav-img-download a,
+                .nav-img-search a,
+                .nav-img-libreria a,
+                .playlist a{
+                   font-size: 0.5;
+                   font-weight: 100;
+                }
 
 /* ANCHOR Main */
 main{
@@ -102,7 +133,7 @@ main{
     flex-direction: column;
     position: absolute;
     height: 80%;
-    width: 80%;
+    width: 70vw;
     top: 10vh;
     right: 0vw;
     overflow-y: auto;
@@ -253,6 +284,11 @@ main{
         .album10{
             border-radius: 50px;
         }
+
+    .space-end{
+        display: flex;
+        justify-content: start;
+    }
 
 /* ANCHOR Footer */
 footer{
