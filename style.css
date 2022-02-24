@@ -50,7 +50,9 @@ header{
 
         .upgrade:hover{
             padding: 10px;
-            font-size: 2em;
+            font-size: 1em;
+            box-shadow: 5px 10px white;
+            border: 0px solid white;
 
         }
 
@@ -310,9 +312,7 @@ footer{
             font-size: smaller;
         }
 
-/* ANCHOR Hover */
 
-}
 
 /* !SECTION  */
 
