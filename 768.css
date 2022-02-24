@@ -2,15 +2,13 @@
     Margin: 0;
     Box-sizing: border-box}
 
-  .clearfix::after{
-   content: "";
-   display: table;
-   clear: both;}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;}
 
-
-
-/* SECTION Mobile */
-@media only screen and (max-width: 768px){
+/* SECTION tablet */
+@media only screen and (min-width: 420px) and (max-width: 768px){
 body{
     position: relative;
     background-color: black;
@@ -18,13 +16,43 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
+    .nav-left-2{
+        display: flex;
+        position: absolute;
+        height: 90%;
+        width: 20vw;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+            .playlist{
+                display: flex;
+                flex-direction: column;
+                width: 20vw;
+                padding-left: 10px;
+            }
+            
+            .playlist div,
+            .nav-left-up div>a,
+            .nav-left-down div>a,
+            .playlist a{
+                color: white;
+                font-size: 1.2em;
+                text-decoration: none;
+            }
+
+            .nav-left-2 div>div>a>img{
+                width: 30px;
+            }
 
 /* ANCHOR Header */
 header{
     display: flex;
     position: absolute;
-    right: 0%;
-    /* background-color: aqua; */
+    right: 0px;
     width: 90%;
     height: 10%;
     justify-content: end;
@@ -45,228 +73,260 @@ header{
         }
 
 /* ANCHOR Nav left */
-/* FIXME capire come fare scomparire la barra */
-/* .nav-left{
-    z-index: 2;
-}
 
-.nav-left-hover{
-    z-index: 1;
-    display: flex;
-    height: 90%;
-    width: 50%;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .nav-left{
+        display: none;
+        position: absolute;
+        height: 90%;
+        width: 10%;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
-nav-left:active{
-    z-index: 0;
-} */
-
-.nav-left{
-    display: flex;
-    height: 90%;
-    width: 10%;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.icon-nav div>img{
-    width: 30px;
-}
+        .icon-nav div>img{
+            width: 30px;
+        }
 
 
 /* ANCHOR Main */
 main{
     display: flex;
+    flex-direction: column;
     position: absolute;
     height: 80%;
-    width: 90%;
-    /* background-color: yellow; */
+    width: 80%;
     top: 10vh;
     right: 0vw;
-    flex-direction: column;
     overflow-y: auto;
-    background-color: #141922;
-}
+    background-color: #141922;}
 
-main div{
-    display: flex;
-    /* flex-direction: column; */
-    overflow-y: auto;
+/* ANCHOR Sezione Nav */
+/* FIXME manca qualche pixel dal TOP */
+        .main-nav{
+            display: flex;
+            position: fixed;
+            flex-wrap: wrap;
+            height: fit-content;
+            justify-content: center;
+            background-color: #141922;
+            margin-top: -1px;
+            padding: 10px 20px 10px 20px;
+            width: 80vw;
+        }
 
-}
+        .main-nav a{
+            color: white;
+            margin: 4px;
+            font-size: 1em;
 
-    main nav a{
-        color: white;
-        margin: 5px;
-    }
-    main nav{
-        position: fixed;
+        }
+
+/* ANCHOR Sezione Album */
+
+    .main-sect{
         display: flex;
-        flex-wrap: wrap;
-        height: fit-content;
-        justify-content: center;
-        background-color: #141922;
-    }
-
-    .album{
-        display: flex;
-        margin-top: 20px;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 70px 20px 0 20px;
+
+    }
+        /* .main-sect-top{
+            margin-top: 70px;
+
+        } */
+        .album-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            width: calc((200/2 - 10px));
+        }
+
+            .album-dim{
+                width: 100px;
+                height: 100px;
+            }
+
+            .album-Subtitle{
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+                color: white;
+                text-align: center;
+                padding: 10px 0 10px 0;
+            }
+            .album-Subtitle p:nth-child(1){
+                font-size: 0.8em;
+                font-weight: 700;
+            }
+
+            .album-Subtitle p:nth-child(2){
+                font-size: 0.6em;
+                font-weight: 100;
+            }
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                color: white;
+                width: 100%;
+                padding: 30px 0 10px 10px;
+            }
+
+                .title h1{
+                    font-size: 1.5em;
+                }
+
+                .title h3{
+                    font-size: 0.8em;
+                }
+
+    .album1{
+        background-image: url('./img/metal_lifting.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    .album div>img{
-        width: 20vw;
+    .album2{
+        background-image: url('./img/stranger.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-/* FIXME mettere le immagini in background */
-    .album-1,
-    .album-2,
-    .album-3,
-    .album-4,
-    .album-5,
-    .album-6,
-    .album-7,
-    .album-8,
-    .album-9,
-    .album-10{
-        padding: 10px;
-        width: calc((100% / 4) - 10px);
+    .album3{
+        background-image: url('./img/aquietplace.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    .album-9,
-    .album-10{
-        border: 1px solid red;
-        border-radius: 100px;
+    .album4{
+        background-image: url('./img/split.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    /* FIXME Stile del testo */
-
-    main h1{
-        font-size: 1.5em;
-        font-weight: 700;
-        color: white;
-        margin-top: 100px;
-        margin-left: 10px;
+    .album5{
+        background-image: url('./img/cure.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h2{
-        font-size: 1.5em;
-        font-weight: 700;
-        color: white;
-        margin-top: 35px;
-        margin-left: 10px;
+    .album6{
+        background-image: url('./img/sinister.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h3{
-        font-size: 0.8em;
-        color: white;
-        color: white;
-        margin-left: 10px;
+    .album7{
+        background-image: url('./img/radar.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main h1:nth-child(3){
-        margin-top: -80px;
+    .album8{
+        background-image: url('./img/mixdaily.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    main div>p{
-        font-weight: 700;
-        text-align: center;
-        color: white;
+    .album9{
+        background-image: url('./img/youg.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-/* FIXME Perché mi prende il 3 e non il secondo? */
-    main div>p:nth-child(3){
-        font-size: 0.8em;
-        text-align: center;
-        color: white;
+
+    .album10{
+        background-image: url('./img/einaudi.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
+
+        .album9,
+        .album10{
+            border-radius: 50px;
+        }
 
 /* ANCHOR Footer */
 footer{
     display: flex;
+    position: absolute;
     justify-content: space-between;
+    top: 90vh;
     height: 10vh;
     width: 100vw;
-    /* background-color: aquamarine; */
 }
 
     .footer-left{
         display: flex;
-        /* background-color: aliceblue; */
-        width: 20%;
+        width: 25%;
         align-items: center;
     }
 
-        .footer-left div>div>img{
-            width: 50px;
+        .footer-left div>img{
+            width: 30px;
         }
+
         .footer-left div>p:nth-child(1){
             font-size: 0.6em;
             font-weight:700;
             color: white;
         }
+
         .footer-left div>p:nth-child(2){
             font-size: 0.5em;
             color: white;
         }
+
         .footer-left div:nth-last-child(2){
-            margin: 3px;
+            padding: 0 6px 0 6px;
         }
 
     .footer-middle{
         display: flex;
-        /* background-color: rgb(247, 10, 10); */
-        width: 50%;
+        width: 45%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
         .footer-middle div{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
         .footer-middle div>div{
             color: white;
-            font-size: 1.2em;
+            font-size: 1em;
             margin: 3px;
         }
+            .input-range{
+               display: flex;
+               align-items: center;
+               border-radius: 50px;
+               width: fit-content;
+              justify-content: center;
+            }
 
-    .footer-right{
+    .footer-right{          
         display: flex;
         justify-content: center;
         color: white;
-        /* background-color: green; */
-        width: 20%;
+        width: 25%;
         align-items: center;
+        justify-content: start;
     }
-        .footer-right div:nth-child(4){
+        /* .footer-right div:nth-child(4){
             width: 10px;
-        }
+        } */
         .footer-right div{
             font-size: smaller;
         }
 
 /* ANCHOR Hover */
 
-
-
-
-
-
-
-
-
-
 }
 
 /* !SECTION  */
-
+    

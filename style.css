@@ -20,6 +20,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+    .nav-left-2{
+        display: none;
+}
+
 /* ANCHOR Header */
 header{
     display: flex;
@@ -88,6 +92,7 @@ main{
             background-color: #141922;
             margin-top: -1px;
             padding: 10px 20px 10px 20px;
+            width: 90vw;
         }
 
         .main-nav a{
@@ -222,16 +227,6 @@ main{
             border-radius: 50px;
         }
 
-
-
-
-
-
-
-
-
-
-
 /* ANCHOR Footer */
 footer{
     display: flex;
@@ -273,7 +268,6 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: red;
     }
         .footer-middle div{
             display: flex;
@@ -312,3 +306,11 @@ footer{
 }
 
 /* !SECTION  */
+
+@media only screen and (max-width: 768px){
+
+
+
+
+}
+    
